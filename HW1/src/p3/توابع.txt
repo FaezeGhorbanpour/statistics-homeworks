@@ -1,0 +1,92 @@
+1)number1 <-0
+x <- 1:100
+for(j in 1:1000)
+   {y <- sample(x,1,replace = FALSE)
+   for(i in 1:1)
+      if(y[i]%%2==0)
+         number1 <- number1+1}
+number1/1000
+
+
+
+2)number1 <-0
+x <- 1:100
+for(j in 1:1000)
+   {y <- sample(x,3,replace = FALSE)
+      if(y[1]%%2==0 && y[2]%%2==0 && y[3]%%2==0)
+        number1 <- number1+1
+    }
+number1/1000
+
+3)number1 <-0
+x <- 1:100
+for(j in 1:1000)
+{y <- sample(x,3,replace = TRUE)
+if(y[1]%%2==0 && y[2]%%2==0 && y[3]%%2==0)
+  number1 <- number1+1
+}
+number1/1000
+
+
+4)number1 <-0
+x <- 1:100
+for(j in 1:1000)
+{y <- sample(x,3,replace = FALSE)
+  if(y[1]+y[2]+y[3] <200)
+    number1 <- number1+1
+}
+number1/1000
+
+16)number1 <-0
+x <- 1:100
+for(j in 1:1000)
+{y <- sample(x,5,replace = FALSE)
+  for(i in 1:5)
+    for(k in 1:5)
+      if(i!=k && y[i]%%y[k]==0)
+        number1 <- number1+1
+}
+number1/1000
+
+
+19)number <-0
+number1 <-0
+number2 <-0
+number3 <-0
+x <- 1:180
+for(j in 1:1000)
+{
+  y <- sample(x,30,replace = FALSE)
+  for(i in 1:180)
+  {   if(y[i]%%3==0)
+        number1 <- number1+1
+     if(y[i]%%3==1)
+        number2 <- number2+1
+     if(y[i]%%3==2)
+        number3 <- number3+1
+  }
+  if(number1>=15 || number2>=15 || number3>=15)
+    number <- number + 1
+  }
+number1/1000
+
+
+
+
+20)number1 <-0
+x <- 1:23
+for(j in 1:1000)
+{
+  for(i in 1:23)
+     number[i]<-0
+  y <- sample(x,112,replace = TRUE)
+  for(i in 1:112)
+     for(k in 1:23)
+       if(y[i] == k)
+         number[k] <- number[k]+1
+  for(m in 1:23)
+    if(number[m]>=10)
+      {number1 <- number1+1
+       break;}
+        }
+number1/1000

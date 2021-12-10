@@ -1,0 +1,3 @@
+head(Boston)
+
+pairs(Boston)
